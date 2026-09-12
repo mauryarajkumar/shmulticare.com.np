@@ -1,0 +1,56 @@
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #0ea5e9;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.follow {
+  color: green;
+  font-weight: bold;
+}
+
+.new {
+  color: red;
+  font-weight: bold;
+}
+
+/* Search input */
+.search-input {
+  margin: 15px 0;
+  padding: 10px 12px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Table responsive */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Better table spacing */
+table th, table td {
+  white-space: nowrap;
+}

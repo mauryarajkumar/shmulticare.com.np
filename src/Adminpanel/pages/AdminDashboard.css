@@ -1,0 +1,115 @@
+/* ===== LAYOUT ===== */
+.dashboard-container {
+  display: flex;
+}
+
+/* ===== CONTENT ===== */
+.dashboard-content {
+  margin-left: 240px;
+  padding: 30px;
+  width: 100%;
+  background: #f1f5f9;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* ===== TITLE ===== */
+.dashboard-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* ===== CARDS ===== */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.dashboard-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.dashboard-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Small top accent */
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+
+/* Card title */
+.card-title {
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* Card value */
+.card-value {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #0ea5e9;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    margin-left: 220px;
+    padding: 20px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== MOBILE ===== */
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0; /* IMPORTANT */
+    padding: 15px;
+  }
+
+  .dashboard-title {
+    font-size: 22px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card {
+    width: 100%;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .card-value {
+    font-size: 24px;
+  }
+}

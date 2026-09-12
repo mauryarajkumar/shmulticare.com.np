@@ -57,6 +57,7 @@ useEffect(() => {
               <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contact Us</Link>
            {/* <a href="#googlemap">Google Map</a> */}
               <Link to="/googlemap" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Google Map</Link>
+                <Link to="/adminlogin"  onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Admin Panel</Link>
         </nav>
 
         {/* Hamburger Button */}
@@ -82,6 +83,7 @@ useEffect(() => {
         <Link to="/about"  onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>About Us</Link>
         <Link to="/contact" onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Contact Us</Link>
         <Link to="/googlemap"  onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Google Map</Link>
+        <Link to="/adminlogin"  onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Admin Panel</Link>
       </nav>
     </header>
 

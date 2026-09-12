@@ -1,18 +1,447 @@
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer {
-  background-color: #020617;
-  color: #e5e7eb;
-  padding: 1.4rem 0;
+  width: 100%;
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 40px;
+  padding-top: 45px;
 }
 
+
+/* =========================================
+   FOOTER CONTENT
+========================================= */
+
 .footer-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 0 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(140px, 1fr)
+    minmax(250px, 1.5fr);
+
+  gap: 50px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   CLINIC SECTION
+========================================= */
+
+.clinic-section {
+  min-width: 0;
+}
+
+.clinic-brand {
   display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  min-width: 0;
+}
+
+
+/* =========================================
+   CLINIC LOGO
+========================================= */
+
+.footer-logo {
+  width: 90px;
+  height: 90px;
+
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   CLINIC DETAILS
+========================================= */
+
+.clinic-details {
+  min-width: 0;
+}
+
+.clinic-details h4 {
+  margin: 3px 0 10px;
+
+  color: #1e293b;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.footer-address {
+  margin: 0 0 8px;
+
+  max-width: 360px;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+.footer-phone {
+  margin: 5px 0;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.footer-phone span {
+  word-break: break-word;
+}
+
+
+/* =========================================
+   GOOGLE MAP LINK
+========================================= */
+
+.map-link {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  color: #0f766e;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.map-link:hover {
+  color: #115e59;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   QUICK LINKS
+========================================= */
+
+.footer-links {
+  min-width: 0;
+}
+
+.footer-links h4,
+.footer-map h4 {
+  margin: 0 0 15px;
+
+  color: #1e293b;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* Navigation */
+
+.footer-links nav {
+  display: flex;
+
   flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.85rem;
+
+  gap: 10px;
+}
+
+.footer-links a {
+  width: fit-content;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #0f766e;
+
+  text-decoration: underline;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   GOOGLE MAP
+========================================= */
+
+.footer-map {
+  min-width: 0;
+}
+
+.footer-map iframe {
+  display: block;
+
+  width: 100%;
+
+  max-width: 350px;
+
+  height: 210px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  margin-top: 40px;
+
+  padding: 18px 20px;
+
+  border-top: 1px solid #e5e7eb;
+
   text-align: center;
 }
 
-.footer-tagline {
-  color: #9ca3af;
+.footer-bottom p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .footer-content {
+    grid-template-columns:
+      1.5fr
+      1fr;
+
+    gap: 35px;
+  }
+
+
+  /* Map goes to second row */
+
+  .footer-map {
+    grid-column: 1 / -1;
+  }
+
+
+  .footer-map iframe {
+    max-width: 100%;
+
+    height: 230px;
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .footer {
+    padding-top: 35px;
+  }
+
+
+  .footer-content {
+    padding: 0 20px;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .footer-map {
+    grid-column: auto;
+  }
+
+
+  .footer-map iframe {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 230px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .footer {
+    margin-top: 30px;
+
+    padding-top: 30px;
+  }
+
+
+  .footer-content {
+    padding: 0 16px;
+
+    gap: 28px;
+  }
+
+
+  /* Logo + Clinic information */
+
+  .clinic-brand {
+    gap: 12px;
+  }
+
+
+  .footer-logo {
+    width: 65px;
+
+    height: 65px;
+  }
+
+
+  .clinic-details h4 {
+    margin-top: 0;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+  }
+
+
+  .footer-address {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+
+  .footer-phone {
+    font-size: 13px;
+  }
+
+
+  .map-link {
+    font-size: 13px;
+  }
+
+
+  .footer-links h4,
+  .footer-map h4 {
+    font-size: 16px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .footer-links nav {
+    gap: 8px;
+  }
+
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+
+  .footer-map iframe {
+    height: 210px;
+
+    border-radius: 8px;
+  }
+
+
+  .footer-bottom {
+    margin-top: 30px;
+
+    padding: 16px;
+  }
+
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+.developed-by {
+  margin-top: 6px;
+  font-size: 18px;
+  color: rgba(69, 86, 236, 0.7);
+}
+
+.developed-by a {
+  color: #45b24e;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.developed-by a:hover {
+  color: #25d366;
 }

@@ -1,0 +1,665 @@
+/* =====================================================
+   DOCTOR DETAILS PAGE
+===================================================== */
+
+.doctor-details-page {
+
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding:
+    40px 20px 80px;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.doctor-breadcrumb {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 35px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+.doctor-breadcrumb a {
+
+  color: #0f766e;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.doctor-breadcrumb a:hover {
+
+  color: #115e59;
+
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   DOCTOR PROFILE
+===================================================== */
+
+.doctor-profile {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 420px)
+    minmax(0, 1fr);
+
+  gap: 55px;
+
+  padding: 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 45px rgba(
+      15,
+      23,
+      42,
+      0.08
+    );
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.doctor-profile-image {
+
+  width: 100%;
+
+  height: 480px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #f1f5f9;
+}
+
+
+.doctor-profile-image img {
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =====================================================
+   PROFILE CONTENT
+===================================================== */
+
+.doctor-profile-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.doctor-profile-badge {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  width: fit-content;
+
+  padding:
+    7px 12px;
+
+  margin-bottom: 15px;
+
+  border-radius: 20px;
+
+  background: #ecfdf5;
+
+  color: #047857;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.doctor-profile-badge span {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 16px;
+
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #047857;
+
+  color: #ffffff;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   DOCTOR NAME
+===================================================== */
+
+.doctor-profile-content h1 {
+
+  margin: 0 0 12px;
+
+  color: #0f172a;
+
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      2.8rem
+    );
+
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+
+/* =====================================================
+   SPECIALIZATION
+===================================================== */
+
+.doctor-profile-content h2 {
+
+  margin: 0;
+
+  color: #0f766e;
+
+  font-size: 19px;
+
+  font-weight: 650;
+
+  line-height: 1.5;
+}
+
+
+.doctor-profile-english {
+
+  margin: 6px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.profile-divider {
+
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    25px 0;
+
+  background: #e2e8f0;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-doctor-title {
+
+  margin: 0 0 8px;
+
+  color: #0f172a;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+.doctor-description {
+
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   CLINIC INFORMATION
+===================================================== */
+
+.doctor-clinic-info {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  margin:
+    25px 0;
+}
+
+
+.clinic-info-item {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+.clinic-info-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 35px;
+
+  height: 35px;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #f0fdfa;
+
+  font-size: 17px;
+}
+
+
+.clinic-info-item strong {
+
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+
+.clinic-info-item p {
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   APPOINTMENT BUTTON
+===================================================== */
+
+.profile-appointment-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  padding:
+    13px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f766e,
+      #115e59
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.profile-appointment-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(
+      15,
+      118,
+      110,
+      0.25
+    );
+}
+
+
+.profile-appointment-btn:active {
+
+  transform:
+    translateY(0);
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.doctor-back {
+
+  margin-top: 30px;
+}
+
+
+.doctor-back a {
+
+  color: #0f766e;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+.doctor-back a:hover {
+
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   NOT FOUND
+===================================================== */
+
+.doctor-not-found {
+
+  max-width: 650px;
+
+  margin:
+    100px auto;
+
+  padding:
+    40px 20px;
+
+  text-align: center;
+}
+
+
+.not-found-icon {
+
+  font-size: 45px;
+
+  margin-bottom: 15px;
+}
+
+
+.doctor-not-found h1 {
+
+  margin-bottom: 10px;
+
+  color: #0f172a;
+}
+
+
+.doctor-not-found p {
+
+  margin-bottom: 20px;
+
+  color: #64748b;
+}
+
+
+.doctor-not-found a {
+
+  color: #0f766e;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .doctor-details-page {
+
+    padding:
+      30px 18px 65px;
+  }
+
+
+  .doctor-profile {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 25px;
+  }
+
+
+  .doctor-profile-image {
+
+    height: 450px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+
+  .doctor-profile-content {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+  .doctor-details-page {
+
+    padding:
+      25px 15px 55px;
+  }
+
+
+  .doctor-breadcrumb {
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  .doctor-profile {
+
+    gap: 25px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+
+  .doctor-profile-image {
+
+    height: 360px;
+
+    border-radius: 14px;
+  }
+
+
+  .doctor-profile-content h1 {
+
+    font-size: 1.9rem;
+  }
+
+
+  .doctor-profile-content h2 {
+
+    font-size: 16px;
+  }
+
+
+  .doctor-description {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .doctor-clinic-info {
+
+    gap: 14px;
+  }
+
+
+  .profile-appointment-btn {
+
+    width: 100%;
+
+    padding:
+      13px 15px;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .doctor-details-page {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+
+  .doctor-profile {
+
+    padding: 15px;
+  }
+
+
+  .doctor-profile-image {
+
+    height: 320px;
+  }
+
+
+  .doctor-profile-content h1 {
+
+    font-size: 1.7rem;
+  }
+
+}

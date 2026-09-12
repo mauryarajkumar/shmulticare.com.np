@@ -1,0 +1,165 @@
+/* ===== MAIN LAYOUT ===== */
+.dashboard-container {
+  display: flex;
+}
+
+/* ===== CONTENT ===== */
+.dashboard-content {
+  margin-left: 240px;
+  padding: 30px;
+  width: 100%;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* ===== TITLE ===== */
+.dashboard-content h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* ===== CARD ===== */
+.medicine-card {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+ 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: 0.3s;
+}
+
+.medicine-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== INFO ===== */
+.med-info {
+  
+  display: flex;
+  flex-direction: column;
+  
+  gap: 5px;
+}
+
+.med-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+.med-details {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* LOW STOCK */
+.low-stock {
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ===== BUTTONS ===== */
+.med-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.med-actions button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+/* EDIT */
+.edit-btn {
+  background: #0ea5e9;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #0284c7;
+}
+
+/* DELETE */
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    margin-left: 220px;
+    padding: 20px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+
+  .medicine-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .med-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .dashboard-content h1 {
+    font-size: 22px;
+  }
+
+  .med-name {
+    font-size: 14px;
+  }
+
+  .med-details {
+    font-size: 12px;
+  }
+
+  .med-actions button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* SEARCH INPUT */
+.search-input {
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}

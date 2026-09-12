@@ -1,0 +1,188 @@
+/* ===== GLOBAL ===== */
+body {
+  background: #f4f7fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.store-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-size: 26px;
+}
+
+/* ===== SEARCH ===== */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* ===== BUTTONS TOP ===== */
+.cart-send-btn,
+.clear-cart-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cart-send-btn {
+  background: #25d366;
+  color: white;
+}
+
+.clear-cart-btn {
+  background: #ef4444;
+  color: white;
+}
+
+/* ===== GRID ===== */
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.medicine-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== IMAGE ===== */
+.medicine-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.medicine-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== CONTENT ===== */
+.med-content {
+  margin-top: 10px;
+}
+
+.med-content p {
+  font-size: 14px;
+  margin: 4px 0;
+  word-break: break-word;
+}
+
+/* ===== LABEL ===== */
+.label {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ===== DESCRIPTION ===== */
+.desc {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ===== READ MORE ===== */
+.read-more {
+  color: #0ea5e9;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+/* ===== PRICE ===== */
+.med-bottom {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.price {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.price-type {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===== STOCK ===== */
+.stock {
+  font-size: 13px;
+}
+
+.stock.low {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===== BUTTONS ===== */
+.cart-btn,
+.buy-now-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  background: #0ea5e9;
+  color: white;
+}
+
+.buy-now-btn {
+  background: #22c55e;
+  color: white;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .medicine-card img {
+    height: 160px;
+  }
+
+  .med-content p {
+    font-size: 13px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .medicine-grid {
+    grid-template-columns: 1fr;
+  }
+}

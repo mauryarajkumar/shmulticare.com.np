@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "./Hero.css";
 
@@ -20,7 +19,8 @@ export default function Hero() {
     {
       image: gynoImg,
       name: "Dr. Sandhya Maharjan",
-      specialty: "स्त्री तथा प्रसूति रोग विशेषज्ञ (Gynecologist & Obstetrician)",
+      specialty:
+        "स्त्री तथा प्रसूति रोग विशेषज्ञ (Gynecologist & Obstetrician)",
     },
     {
       image: entImg,
@@ -55,17 +55,27 @@ export default function Hero() {
   return (
     <section id="hero" className="xyz">
       <div className="container hero-grid">
-
         {/* LEFT SIDE TEXT */}
         <div className="hero-text">
           <h1>
             Your Health, <span className="highlight">Our Priority</span>
           </h1>
 
-          <p className="hero-subtitle">
+          {/* <p className="hero-subtitle">
             Siddhartha Health And Multicare Pvt. Ltd. is a modern healthcare
             center in Bhairahawa dedicated to reliable, compassionate, and
             high-quality medical care.
+          </p> */}
+
+          <p className="hero-subtitle">
+            Siddhartha Health And Multicare Pvt. Ltd. is a trusted healthcare
+            center in Bhairahawa, Rupandehi, Nepal, providing quality medical
+            care for children, women, and families. Our experienced medical
+            specialists provide professional consultation and healthcare
+            services in Pediatrics, Gynecology, Orthopedics, ENT, and
+            Dermatology. We are committed to providing compassionate, reliable,
+            and patient-focused medical care in a safe, comfortable, and modern
+            healthcare environment.
           </p>
 
           <div className="hero-cta">
@@ -75,12 +85,17 @@ export default function Hero() {
             <a href="#services" className="btn-secondary">
               View Services
             </a>
+
+            <a href="#medicinestore" className="btn-secondary">
+              Medicine Store
+            </a>
           </div>
 
           <div className="hero-contact">
             <p>
-               Siddharthnagar-7, New Road, Bhairahawa <br />
-              📞 <a href="tel:+9779821558535">+977 9821558535</a>
+              Siddharthnagar-7, New Road, Bhairahawa <br />
+              📞 <a href="tel:+9779821558535">+977 9821558535</a> <br></br>
+              📞 <a href="tel:+977 9766714481">+977 9766714481</a>
             </p>
           </div>
         </div>
@@ -88,8 +103,9 @@ export default function Hero() {
         {/* RIGHT SIDE DOCTOR CARD */}
         <div className="hero-image">
           <div className="doctor-card">
-
-            <div className="doctor-slider" onMouseEnter={() => setPaused(true)}
+            <div
+              className="doctor-slider"
+              onMouseEnter={() => setPaused(true)}
               onMouseLeave={() => setPaused(false)}
             >
               <img
@@ -103,10 +119,8 @@ export default function Hero() {
               <h3>{doctors[index].name}</h3>
               <p>{doctors[index].specialty}</p>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
   );

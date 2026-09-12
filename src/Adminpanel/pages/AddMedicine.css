@@ -1,0 +1,76 @@
+/* Container */
+.add-medicine-container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.add-medicine-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.add-medicine-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Button */
+.add-medicine-form button {
+  padding: 12px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-medicine-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  min-height: 80px;
+  resize: none;
+}
+
+
+/* dropdown fro the price type */
+/* SELECT DROPDOWN */
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+select:hover {
+  border-color: #0ea5e9;
+}
+
+/* FOCUS */
+select:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+/* OPTION */
+select option {
+  padding: 10px;
+}

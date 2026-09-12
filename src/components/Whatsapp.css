@@ -1,80 +1,272 @@
+/* =========================================
+   FLOATING CONTACT WIDGET
+========================================= */
+
 .whatsapp-wrapper {
   position: fixed;
-  bottom: 22px;
   right: 22px;
-  z-index: 999;
-}
+  bottom: 22px;
 
-.whatsapp-link {
   display: flex;
-  align-items: center;
-  text-decoration: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+
+  z-index: 9999;
 }
 
-/* Chat Bubble */
+
+/* =========================================
+   HELP TEXT
+========================================= */
+
 .whatsapp-text {
   position: relative;
+
   background: #ffffff;
-  color: #333;
+  color: #1f2937;
+
   padding: 10px 16px;
-  border-radius: 25px;
+
+  border-radius: 14px;
+
   font-size: 14px;
-  margin-right: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  font-weight: 500;
+  font-weight: 600;
+
   white-space: nowrap;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.12),
+    0 2px 7px rgba(15, 23, 42, 0.06);
+
+  border: 1px solid #eef0f3;
 }
 
-/* Bubble Tail */
+
+/* Bubble arrow pointing down */
+
 .whatsapp-text::after {
   content: "";
+
   position: absolute;
-  right: -6px;
-  bottom: 12px;
-  width: 14px;
-  height: 14px;
+
+  right: 21px;
+  bottom: -6px;
+
+  width: 11px;
+  height: 11px;
+
   background: #ffffff;
+
+  border-right: 1px solid #eef0f3;
+  border-bottom: 1px solid #eef0f3;
+
   transform: rotate(45deg);
 }
 
-/* WhatsApp Circle */
-.whatsapp-button {
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
+
+/* =========================================
+   CALL + MESSENGER
+========================================= */
+
+.contact-button {
+  width: 52px;
+  height: 52px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  border-radius: 50%;
+
+  color: white;
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 22px rgba(15, 23, 42, 0.18);
+
+  transition: all 0.25s ease;
 }
+
+
+/* Hover */
+
+.contact-button:hover {
+  transform: translateY(-4px) scale(1.06);
+
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.25);
+}
+
+
+/* Call */
+
+.call-button {
+  background: linear-gradient(
+    145deg,
+    #3b82f6,
+    #2563eb
+  );
+}
+
+.call-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* Messenger */
+
+.messenger-button {
+  background: linear-gradient(
+    145deg,
+    #2d9cff,
+    #0084ff
+  );
+}
+
+.messenger-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.whatsapp-button {
+  position: relative;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #2ee86f,
+    #25d366
+  );
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 28px rgba(37, 211, 102, 0.30),
+    0 3px 8px rgba(15, 23, 42, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+
+/* WhatsApp icon */
 
 .whatsapp-button img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
+
+  transition: transform 0.3s ease;
 }
 
-/* Hover Effect */
+
+/* Hover */
+
 .whatsapp-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px) scale(1.06);
+
+  box-shadow:
+    0 15px 35px rgba(37, 211, 102, 0.38);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .whatsapp-button {
-    width: 54px;
-    height: 54px;
+.whatsapp-button:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   WHATSAPP PULSE
+========================================= */
+
+.whatsapp-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -5px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(37, 211, 102, 0.35);
+
+  animation: whatsappPulse 2.2s infinite;
+
+  pointer-events: none;
+}
+
+@keyframes whatsappPulse {
+
+  0% {
+    transform: scale(0.92);
+    opacity: 0.8;
   }
 
-  .whatsapp-button img {
-    width: 26px;
-    height: 26px;
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .whatsapp-wrapper {
+    right: 15px;
+    bottom: 15px;
+    gap: 7px;
   }
 
   .whatsapp-text {
-    font-size: 13px;
-    padding: 8px 12px;
+    padding: 8px 13px;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+
+  .contact-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .call-button svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .messenger-button svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .whatsapp-button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .whatsapp-button img {
+    width: 30px;
+    height: 30px;
   }
 }
